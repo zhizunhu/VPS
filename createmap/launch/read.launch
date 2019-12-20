@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="createmap" type="read" name="mapbuilder" output="screen">
+    </node>
+</launch>

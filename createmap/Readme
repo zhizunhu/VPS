@@ -1,0 +1,7 @@
+把createmap文件夹拷贝到已经编译通过的maplab工作空间的src目录下，然后在工作空间中运行：
+catkin build --no-deps createmap
+
+source devel/setup.bash
+
+
+然后运行:roslaunch createmap readfromtopic.launch

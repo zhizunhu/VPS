@@ -1,0 +1,11 @@
+<!--实时接受话题并保存数据，结束后建图并保存-->
+<launch>
+    <node pkg="createmap" type="readfromtopic" name="topic" output="screen">
+        <param name="config_file" type="string" value="/home/zzh/maplab_src/src/createmap/config/test.yaml"/>
+        <param name="is_fisheye" type="bool" value="true"/>
+        <param name="camera_topic" type="string" value="/cam0/image_raw"/>
+        <param name="imu_topic" type="string" value="/imu0"/>
+        <param name="gt_topic" type="string" value="/tf0"/>
+        <param name="map_folder" type="string" value="/home/zzh/_map"/>
+    </node>
+</launch>

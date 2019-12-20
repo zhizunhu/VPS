@@ -1,0 +1,8 @@
+prefix=/home/zzh/maplab_ws2/src/createmap/cmake-build-debug/devel
+
+Name: createmap
+Description: Description of createmap
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/zzh/maplab_ws2/src/createmap/cmake-build-debug/devel/lib 
+Requires: 
