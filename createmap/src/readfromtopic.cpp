@@ -7,6 +7,7 @@
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/Imu.h>
 #include <geometry_msgs/PoseStamped.h>
+#include <nav_msgs/Odometry.h>
 #include <cv_bridge/cv_bridge.h>
 #include <iostream>
 #include <fstream>
@@ -39,7 +40,7 @@ std::vector<mapbuilder::pic_frame> pic_data;
 size_t ite=5;
 void imu_callback(const sensor_msgs::Imu::ConstPtr& imu_msg);
 void img_callback(const sensor_msgs::Image::ConstPtr& img_msg);
-void gt_callback(const geometry_msgs::PoseStamped::ConstPtr& gt);
+void gt_callback(const nav_msgs::Odometry::ConstPtr& gt);
 std::shared_ptr<aslam::NCamera> get_camera_rig(ros::NodeHandle n);
 int main(int argc, char ** argv){
     ros::init(argc, argv, "mapbuilder");
@@ -238,11 +239,11 @@ void img_callback(const sensor_msgs::Image::ConstPtr& img_msg){
     img1.image = cv_ptr->image.clone();
     pic_data.push_back(img1);
 }
-void gt_callback(const geometry_msgs::PoseStamped::ConstPtr& gt){
+void gt_callback(const nav_msgs::Odometry::ConstPtr& gt){
     double timestamp = gt->header.stamp.toSec();
-    Eigen::Quaterniond q(gt->pose.orientation.w, gt->pose.orientation.x,
-                         gt->pose.orientation.y, gt->pose.orientation.z);
-    Eigen::Vector3d t(gt->pose.position.x, gt->pose.position.y, gt->pose.position.z);
+    Eigen::Quaterniond q(gt->pose.pose.orientation.w, gt->pose.pose.orientation.x,
+                         gt->pose.pose.orientation.y, gt->pose.pose.orientation.z);
+    Eigen::Vector3d t(gt->pose.pose.position.x, gt->pose.pose.position.y, gt->pose.pose.position.z);
     mapbuilder::pose data;
     //data.timestamp = timestamp;
     data.rotation = q.toRotationMatrix();
