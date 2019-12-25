@@ -91,9 +91,8 @@ namespace IROS {
         fsSetting.release();
     }
 
-    void camera_config_from_yaml(ros::NodeHandle &n, Eigen::Matrix<double, 4, 1> &cam_proj,
-                                 Eigen::Matrix<double, 4, 1> &cam_dist, Eigen::Matrix4d &T_I_C,
-                                 std::vector<int> &resolution) {
+    void camera_config_from_yaml(ros::NodeHandle& n, Eigen::Matrix<double, 4, 1>& cam_proj,
+                                 Eigen::Matrix<double, 4, 1>& cam_dist, Eigen::Matrix4d& T_I_C, std::vector<int>& resolution){
         std::string config_file;
         std::string config_default = "/home/zzh/rosbag/ss/OpenLORIS.yaml";
         n.param<std::string>("config_file", config_file, config_default);
@@ -106,12 +105,12 @@ namespace IROS {
         cv::Mat rotation, transpose;
         Eigen::Matrix3d rotation_eigen;
         Eigen::Vector3d transpose_eigen;
-        fsSetting["C02IMUextrinsicRotation"] >> rotation;
+        fsSetting["C02IMUextrinsicRotation"] >>  rotation;
         fsSetting["C02IMUextrinsicTranslation"] >> transpose;
         cv::cv2eigen(rotation, rotation_eigen);
         cv::cv2eigen(transpose, transpose_eigen);
-        T_I_C.block(0, 0, 3, 3) = rotation_eigen;
-        T_I_C.block(0, 3, 3, 1) = transpose_eigen;
+        T_I_C.block(0,0,3,3)= rotation_eigen;
+        T_I_C.block(0, 3, 3, 1)= transpose_eigen;
         //fenbianlv
         int width = fsSetting["image_width"];
         int height = fsSetting["image_height"];

@@ -8,6 +8,7 @@
 #include <sensor_msgs/Imu.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <tf2_msgs/TFMessage.h>
+#include <nav_msgs/Odometry.h>
 #include <cv_bridge/cv_bridge.h>
 #include <iostream>
 #include <fstream>
@@ -42,12 +43,12 @@ size_t ite=5;
 void acc_callback(const sensor_msgs::Imu::ConstPtr& acc_msg);
 void gyr_callback(const sensor_msgs::Imu::ConstPtr& gyr_msg);
 void img_callback(const sensor_msgs::Image::ConstPtr& img_msg);
-void gt_callback(const tf2_msgs::TFMessage::ConstPtr& gt);
-//std::shared_ptr<aslam::NCamera> get_camera_rig(ros::NodeHandle n);
+void gt_callback(const nav_msgs::Odometry::ConstPtr& gt);
+std::shared_ptr<aslam::NCamera> get_camera_rig(ros::NodeHandle n);
 int main(int argc, char ** argv){
     ros::init(argc, argv, "IROS_map");
     ros::NodeHandle n("~");
-    /*vi_map::ImuSigmas imu_sigma;
+    vi_map::ImuSigmas imu_sigma;
     IROS::imuconfig_from_yaml(n, imu_sigma);
     //imu_config
     constexpr char KImuHardwareID[] = "imu0";
@@ -56,7 +57,7 @@ int main(int argc, char ** argv){
     vi_map::Imu::UniquePtr imu_rig = aligned_unique<vi_map::Imu>(imu_sensor_Id, static_cast<std::string>(KImuHardwareID));
     imu_rig->setImuSigmas(imu_sigma);
     //camera_config
-    std::shared_ptr<aslam::NCamera> camera_rig = get_camera_rig(n);*/
+    std::shared_ptr<aslam::NCamera> camera_rig = get_camera_rig(n);
 
     std::string cam_topic;
     std::string acc_topic;
@@ -65,8 +66,8 @@ int main(int argc, char ** argv){
     std::string map_folder;
     IROS::get_topic_and_path(n, cam_topic, acc_topic, gyr_topic, gt_topic, map_folder);
 
-    //vi_map::VIMap* map = new vi_map::VIMap(map_folder);
-   // online_map_builders::StreamMapBuilder* builder = new online_map_builders::StreamMapBuilder(camera_rig, std::move(imu_rig), map);
+    vi_map::VIMap* map = new vi_map::VIMap(map_folder);
+    online_map_builders::StreamMapBuilder* builder = new online_map_builders::StreamMapBuilder(camera_rig, std::move(imu_rig), map);
     double last_timestamp = -1;
     ros::Subscriber pic = n.subscribe(cam_topic, 100, img_callback);
     ros::Subscriber acc = n.subscribe(acc_topic, 100, acc_callback);
@@ -106,7 +107,6 @@ int main(int argc, char ** argv){
             T_M_I.block(0,0,3,3)=gt_data.find(cur_timestamp)->second.rotation;
             T_M_I.block(0,3,3,1)=gt_data.find(cur_timestamp)->second.transpose;
         } else{
-            auto  first_t = 
             LOG(ERROR) << "could not find gt";
             continue;
         }
@@ -131,7 +131,7 @@ int main(int argc, char ** argv){
             last_timestamp = cur_timestamp;
             continue;
         }
-        std::vector<mapbuilder::IMUDATA> imu;
+        std::vector<IROS::IMUDATA> imu;
         /*for (size_t i=0; i < imu_data.size()-1; i++){
             if (imu_data.at(i).timestamp <= last_timestamp && imu_data.at(i+1).timestamp > last_timestamp){
                 mapbuilder::IMUDATA data = interpolate_data(imu_data.at(i), imu_data.at(i+1), last_timestamp);
@@ -156,9 +156,9 @@ int main(int argc, char ** argv){
             }
 
         }*/
-       /* for (ite=ite-5; ite < imu_data.size()-1; ite++){
+        for (ite=ite-5; ite < imu_data.size()-1; ite++){
             if (imu_data.at(ite).timestamp <= last_timestamp && imu_data.at(ite+1).timestamp > last_timestamp){
-                mapbuilder::IMUDATA data = interpolate_data(imu_data.at(ite), imu_data.at(ite+1), last_timestamp);
+                IROS::IMUDATA data = interpolate_data(imu_data.at(ite), imu_data.at(ite+1), last_timestamp);
                 //ROS_INFO("imu time is :%f", data.timestamp);
                 imu.push_back(data);
                 continue;
@@ -171,7 +171,7 @@ int main(int argc, char ** argv){
             if (imu_data.at(ite).timestamp <= cur_timestamp && imu_data.at(ite+1).timestamp > cur_timestamp){
                 imu.push_back(imu_data.at(ite));
                 if (imu.at(imu.size()-1).timestamp != cur_timestamp){
-                    mapbuilder::IMUDATA data = interpolate_data(imu_data.at(ite), imu_data.at(ite+1), cur_timestamp);
+                    IROS::IMUDATA data = interpolate_data(imu_data.at(ite), imu_data.at(ite+1), cur_timestamp);
                     imu.push_back(data);
                 }
 
@@ -203,12 +203,12 @@ int main(int argc, char ** argv){
     backend::SaveConfig save_config;
     save_config.overwrite_existing_files = true;
     vi_map::serialization::saveMapToFolder(map_folder, save_config, map);
-    ROS_INFO("succeed");*/
+    ROS_INFO("succeed");
     return 0;
 }
 
 
-/*std::shared_ptr<aslam::NCamera> get_camera_rig(ros::NodeHandle n){
+std::shared_ptr<aslam::NCamera> get_camera_rig(ros::NodeHandle n){
     std::shared_ptr<aslam::NCamera> camera_rig;
     std::vector<int> resolution;
     Eigen::Matrix<double, 4, 1> cam_proj;
@@ -235,7 +235,7 @@ int main(int argc, char ** argv){
     std::string cam_lable = "ncamera";
     camera_rig = std::make_shared<aslam::NCamera>(aslam::NCameraId::Random(), T_C_Ii, cameras, cam_lable);
     return camera_rig;
-}*/
+}
 
 
 
@@ -271,12 +271,11 @@ void img_callback(const sensor_msgs::Image::ConstPtr& img_msg){
     img1.image = cv_ptr->image.clone();
     pic_data.push_back(img1);
 }
-void gt_callback(const tf2_msgs::TFMessage::ConstPtr& gt){
-    double timestamp = gt->transforms.data()->header.stamp.toSec();
-    Eigen::Quaterniond q(gt->transforms.data()->transform.rotation.w, gt->transforms.data()->transform.rotation.x,
-    gt->transforms.data()->transform.rotation.y, gt->transforms.data()->transform.rotation.z);
-    Eigen::Vector3d t(gt->transforms.data()->transform.translation.x, gt->transforms.data()->transform.translation.y,
-    gt->transforms.data()->transform.translation.z);
+void gt_callback(const nav_msgs::Odometry::ConstPtr& gt){
+    double timestamp = gt->header.stamp.toSec();
+    Eigen::Quaterniond q(gt->pose.pose.orientation.w, gt->pose.pose.orientation.x,
+                         gt->pose.pose.orientation.y, gt->pose.pose.orientation.z);
+    Eigen::Vector3d t(gt->pose.pose.position.x, gt->pose.pose.position.y, gt->pose.pose.position.z);
     IROS::POSE data;
     //data.timestamp = timestamp;
     data.rotation = q.toRotationMatrix();

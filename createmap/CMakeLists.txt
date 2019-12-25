@@ -224,8 +224,8 @@ MESSAGE(STATUS "sssssss" ${OpenCV_INCLUDE_DIRS})
 #target_link_libraries(mapbuilder ${catkin_LIBRARIES} ${OpenCV_LIBS})
 
 
-#add_executable(readfromtopic src/readfromtopic.cpp)
-#target_link_libraries(readfromtopic ${catkin_LIBRARIES} ${OpenCV_LIBS})
+add_executable(readfromtopic src/readfromtopic.cpp)
+target_link_libraries(readfromtopic ${catkin_LIBRARIES} ${OpenCV_LIBS})
 
 add_executable(IROS_map src/IROS_map.cpp)
 target_link_libraries(IROS_map ${catkin_LIBRARIES} ${OpenCV_LIBS})

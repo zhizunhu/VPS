@@ -179,6 +179,8 @@ int main(int argc, char ** argv){
     save_config.overwrite_existing_files = true;
     vi_map::serialization::saveMapToFolder(map_folder, save_config, map);
     ROS_INFO("succeed");
+    delete (map);
+    delete(builder);
     return 0;
 }
 

@@ -78,6 +78,8 @@ int main(int argc, char ** argv){
     save_config.overwrite_existing_files = true;
     vi_map::serialization::saveMapToFolder(map_folder, save_config, map);
     std::cout << "succeed" << std::endl;*/
+    delete (map);
+    delete(builder);
     return 0;
 }
 

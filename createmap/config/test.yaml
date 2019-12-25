@@ -1,0 +1,180 @@
+%YAML:1.0
+
+#common parameters
+imu_topic: "/camera/imu_gyro"
+image0_topic: "/camera/fisheye1/image_raw"
+image1_topic: "/t265/fisheye2/image_raw"
+odom_topic: "/camera/odom"
+output_path: "/tum_pose.txt"         # vins outputs will be wrttento vins_folder_path + output_path
+vins_folder_path: "/home/npcdna/multislam/src/multi_slam"  #  "/home/lyh_young/multi_slam_ws/src/multi_slam"
+use_adjust_param: 0
+adjust_param: /home/npcdna/person_code/auto_adjust_param/OpenLORIS.yaml
+use_GMS: 0
+process_imu_dt: 0
+use_edge: 0
+use_line: 1
+use_harrispoint: 0
+model_type: KANNALA_BRANDT
+camera_name: kannala-brandt
+image_width: 640
+image_height: 480
+projection_parameters:
+   k2: 0.009021128160543755
+   k3: -0.02923106982675979
+   k4: 0.03575099139197932
+   k5: -0.01305653026438099
+   mu: 260.628
+   mv: 259.046
+   u0: 311.885
+   v0: 234.024
+
+# Extrinsic parameter between ODOM and Camera.
+optimization_Toc_extrinsic: 0  # 0  Have an accurate extrinsic parameters. We will trust the following odom^R_cam, odom^T_cam, don't change it.
+                        # 1  Have an initial guess about extrinsic parameters. We will optimize around your initial guess.
+exR_finished: 1
+
+C02IMUextrinsicRotation: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data:  [ 0.9999124458318692,0.013232486795308555, 4.4314123813978e-05,
+            -0.013231413348487249,   0.9997760129775242,  0.016518280042641727,
+            0.00017427372452013417,   -0.016517420136862998,    0.9998635629228078]
+
+C02IMUextrinsicTranslation: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: d
+   data:  [0.0068797026485456735, 0.0021988518878476603,-3.6631173134439025e-05]
+            
+
+ex_calib_result_path: "/config/euroc/ex_calib_result.yaml"  # If you choose 1  the extrinsic calibration result will be written vins_folder_path + ex_calib_result_path.                        
+#If you choose 0 or 1, you should write down the following matrix.
+#Rotation from camera frame to imu frame, imu^R_cam
+
+#wheel parameter:
+rear_wheel_dl: 0.15     #wheel 直径 m
+f_rate: 19.20321   #//轮子的阻尼比系数
+rear_track: 0.45   ## 两轮间距0.45m
+
+
+###Roc*tci+toc
+I2OextrinsicTranslation: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: d
+   data: [0.237693, -0.0494227,0.894904]
+
+#front
+C02OextrinsicRotation: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 0.011515,  0.0111689,   0.999871,
+            -0.999805,  0.0162023,  0.0113333,
+            -0.0160737,  -0.999806,  0.0113533]
+
+
+C02OextrinsicTranslation: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: d
+   data: [ 0.23757, -0.0387247, 0.895076]
+
+#rear
+C12OextrinsicRotation: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 0.0652258, 0.24909, -0.966281,
+           0.997867, -0.0187191, 0.0625325, 
+           -0.00251167, -0.968299, -0.24978]
+
+
+
+C12OextrinsicTranslation: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: d
+   data: [-0.686395, 0.211792,0.95]
+
+#left
+C22OextrinsicRotation: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 0.998393, 0.0460532, -0.0330303,
+           0.0539707, -0.594766, 0.802085, 
+           0.0172933, -0.802579, -0.596295]
+
+
+
+C22OextrinsicTranslation: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: d
+   data: [1.81043, 0.671154,1.03]
+
+#right
+C32OextrinsicRotation: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ -0.998684, 0.00609418, -0.0509227,
+           0.0468714, 0.511475, -0.858019, 
+           0.0208168, -0.859277, -0.511087]
+
+
+
+C32OextrinsicTranslation: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: d
+   data: [1.78257, -0.713837,1.05]
+
+#feature traker paprameters
+max_cnt: 150     #200       # max feature number in feature tracking  #120
+max_line_cnt: 300
+min_dist: 30            # min distance between two features
+line_min_dist: 20       # min distance betwee two line sample features
+freq: 15             # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image 
+F_threshold: 1.0        # ransac threshold (pixel)
+show_track: 0           # publish tracking image as topic
+equalize: 1             # if image is too dark or light, trun on equalize to find enough features
+fisheye: 1              # if using fisheye, trun on it. A circle mask will be loaded to remove edge noisy points
+
+#optimization parameters
+max_solver_time: 0.04  # max solver itration time (ms), to guarantee real time
+max_num_iterations: 10   # max solver itrations, to guarantee real time
+keyframe_parallax: 10.0 # keyframe selection threshold (pixel)
+triangulate_threshold: 400  #400cafe2   2000 for cafe1 corridor1　　６９５
+
+#imu parameters       The more accurate parameters you provide, the better performance
+acc_n: 6.6952452471014112e-05          # accelerometer measurement noise standard deviation. #0.599298904976
+gyr_n: 5.1480301408446394e-06        # gyroscope measurement noise standard deviation.     #0.198614898699
+acc_w: 9.9999997473787516e-05         # accelerometer bias random work noise standard deviation.  #0.02
+gyr_w: 4.9999999873762135e-07       # gyroscope bias random work noise standard deviation.     #4.0e-5
+g_norm: 9.8015     # gravity magnitude
+
+#loop closure parameters
+loop_closure: 1   #if you want to use loop closure to minimize the drift, set loop_closure true and give your brief pattern file path and vocabulary file path accordingly;
+                     #also give the camera calibration file same as feature_tracker node
+pattern_file: "/support_files/brief_pattern.yml"
+voc_file: "/support_files/brief_k10L6.bin"
+min_loop_num: 25
+
+visualLookAtX: 1
+visualLookAtY: 0
+visualLookAtZ: 1
+
+#line setting
+EDline_NFeatures: 300               #最大线条数量,该参数 EDline 与LSD 一样
+#EDline parameters               default
+EDLine_ksize: 15
+EDLine_sigma: 30.0
+EDLine_gradienThreshold: 25          # ORIGINAL WAS 25 PL:80
+EDline_anchorThreshold: 8           #8
+EDLine_scanIntervals: 1           #1
+EDLine_minLineLen: 30             #最短线条长度，与图像尺寸有关
+EDLine_lineFitErrThreshold: 2   #1.4
+
