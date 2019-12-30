@@ -33,6 +33,7 @@
 #include <vi-map/vi-map-serialization.h>
 #include <opencv2/core/eigen.hpp>
 namespace mapbuilder {
+    typedef Eigen::Matrix<double, 3, 1> Vector3;
     struct IMUDATA {
 
         /// Timestamp of the reading
@@ -63,6 +64,70 @@ namespace mapbuilder {
         data.am = (1 - lambda) * imu_1.am + lambda * imu_2.am;
         data.wm = (1 - lambda) * imu_1.wm + lambda * imu_2.wm;
         return data;
+    }
+    bool isLessThenEpsilons4thRoot(double x){
+        static const double epsilon4thRoot = pow(std::numeric_limits<double>::epsilon(), 1.0/4.0);
+        return x < epsilon4thRoot;
+    }
+
+    double arcSinXOverX(double x) {
+        if(isLessThenEpsilons4thRoot(fabs(x))){
+            return double(1.0) + x * x * double(1.0/6.0);
+        }
+        return asin(x) / x;
+    }
+    Eigen::Vector3d log(const Eigen::Quaterniond &q){
+        const Eigen::Matrix<double, 3, 1> a = Vector3(q.x(),q.y(),q.z());
+        const double na = a.norm();
+        const double eta = q.w();
+        double scale;
+        if(fabs(eta) < na){ // use eta because it is more precise than na to calculate the scale. No singularities here.
+            // check sign of eta so that we can be sure that log(-q) = log(q)
+            if (eta >= 0) {
+                scale = acos(eta) / na;
+            } else {
+                scale = -acos(-eta) / na;
+            }
+        } else {
+            if(eta > 0) {
+                // For asin(na)/ na the singularity na == 0 can be removed. We can ask (e.g. Wolfram alpha) for its series expansion at na = 0. And that is done in the following function.
+                scale = arcSinXOverX(na);
+            } else {
+                // the negative is here so that log(-q) == log(q)
+                scale = arcSinXOverX(na);
+            }
+        }
+        return a * (double(2.0) * scale);
+    }
+    Eigen::Quaterniond exp(const Vector3 & dx){
+        // Method of implementing this function that is accurate to numerical precision from
+        // Grassia, F. S. (1998). Practical parameterization of rotations using the exponential map. journal of graphics, gpu, and game tools, 3(3):29–48.
+        double theta = dx.norm();
+        // na is 1/theta sin(theta/2)
+        double na;
+        if(isLessThenEpsilons4thRoot(theta)){
+            static const double one_over_48 = 1.0/48.0;
+            na = 0.5 + (theta * theta) * one_over_48;
+        } else {
+            na = sin(theta*0.5) / theta;
+        }
+        double ct = cos(theta*0.5);
+        return Eigen::Quaterniond(ct,dx[0]*na,dx[1]*na,dx[2]*na);
+    }
+    pose interplate_gt(const pose pose1, double timestamp1, const pose pose2, double timestamp2, double cur_timestamp){
+        pose cur_pose;
+        double lambda = (cur_timestamp - timestamp1) / (timestamp2 - timestamp1);
+        cur_pose.transpose = (1 - lambda) * pose1.transpose + lambda * pose2.transpose;
+
+        Eigen::Quaterniond q_befor(pose1.rotation);
+        Eigen::Quaterniond q_after(pose2.rotation);
+        Eigen::Quaterniond q_cur;
+        q_cur.setIdentity();
+        Eigen::Quaterniond q_mid = q_befor.inverse() * q_after;
+        q_cur = q_befor * exp(lambda * log(q_mid));
+        cur_pose.rotation = q_cur.toRotationMatrix();
+
+        return cur_pose;
     }
     void imuconfig_from_yaml(ros::NodeHandle& n, vi_map::ImuSigmas& imu_sigma){
         std::string config_file;

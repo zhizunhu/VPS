@@ -30,6 +30,7 @@
 #include <vi-map/vi-map-serialization.h>
 #include <mapbuilder.h>
 #include <glog/logging.h>
+#include <exception>
 std::vector<mapbuilder::IMUDATA> imu_data;
 std::map<double, mapbuilder::pose> gt_data;
 std::vector<mapbuilder::pic_frame> pic_data;
@@ -82,8 +83,30 @@ int main(int argc, char ** argv){
             T_M_I.block(0,0,3,3)=gt_data.find(cur_timestamp)->second.rotation;
             T_M_I.block(0,3,3,1)=gt_data.find(cur_timestamp)->second.transpose;
         } else{
-            LOG(ERROR) << "could not find gt";
-            continue;
+
+            LOG(ERROR) << "could not find gt , so interplate";
+
+            //continue;
+            auto gt_after = gt_data.lower_bound(cur_timestamp);
+            double time_after = gt_after->first;
+            mapbuilder::pose pose_after = gt_after->second;
+            if (gt_after == gt_data.begin()){
+                continue;
+            }
+            try {
+                gt_after--;
+                double time_befor = gt_after->first;
+                mapbuilder::pose pose_before = gt_after->second;
+
+                mapbuilder::pose cur_pose = mapbuilder::interplate_gt(pose_before, time_befor, pose_after, time_after,
+                                                                      cur_timestamp);
+                T_M_I.block(0, 0, 3, 3) = cur_pose.rotation;
+                T_M_I.block(0, 3, 3, 1) = cur_pose.transpose;
+            }
+            catch (std::exception &e){
+                std::cout << e.what() << std::endl;
+                continue;
+            }
         }
         vio::VioUpdate update;
         update.timestamp_ns = (int64_t)(1e9*cur_timestamp);

@@ -96,8 +96,8 @@ int main(int argc, char ** argv){
         imu.am = acc_data.at(i).am;
         imu.wm = gyr_inter.wm;
         imu_data.push_back(imu);
-
     }
+
     std::cout << "imu size is" << imu_data.size() << std::endl;
     for (int i=0; i < pic_data.size(); i ++){
         IROS::PIC cur_frame = pic_data.at(i);
