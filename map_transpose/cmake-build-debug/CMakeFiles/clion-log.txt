@@ -1,0 +1,31 @@
+/home/zzh/clion-2019.2.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/zzh/maplab_ws2/src/map_transpose
+-- Using CATKIN_DEVEL_PREFIX: /home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/devel
+-- Using CMAKE_PREFIX_PATH: 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/test_results
+-- Found gtest: gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.18
+-- BUILD_SHARED_LIBS is on
+Traceback (most recent call last):
+  File "/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/catkin_generated/generate_cached_setup.py", line 20, in <module>
+    from catkin.environment_cache import generate_environment_script
+ImportError: No module named catkin.environment_cache
+CMake Error at /opt/ros/kinetic/share/catkin/cmake/safe_execute_process.cmake:11 (message):
+  execute_process(/usr/bin/python
+  "/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/catkin_generated/generate_cached_setup.py")
+  returned error code 1
+Call Stack (most recent call first):
+  /opt/ros/kinetic/share/catkin/cmake/all.cmake:207 (safe_execute_process)
+  /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:20 (include)
+  /home/zzh/maplab_ws2/devel/share/catkin_simple/cmake/catkin_simpleConfig.cmake:174 (find_package)
+  CMakeLists.txt:5 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/CMakeFiles/CMakeError.log".

@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="map_transpose"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\devel\;CMake Files\..\..\devel\share\;CMake Files\..\..\devel\share\catkin_simple\;CMake Files\..\..\devel\share\catkin_simple\cmake\;CMake Files\..\..\devel\share\console_common\;CMake Files\..\..\devel\share\console_common\cmake\;CMake Files\..\..\devel\share\gflags_catkin\;CMake Files\..\..\devel\share\gflags_catkin\cmake\;CMake Files\..\..\devel\share\glog_catkin\;CMake Files\..\..\devel\share\glog_catkin\cmake\;CMake Files\..\..\devel\share\maplab_common\;CMake Files\..\..\devel\share\maplab_common\cmake\;CMake Files\..\..\devel\share\aslam_cv_common\;CMake Files\..\..\devel\share\aslam_cv_common\cmake\;CMake Files\..\..\devel\share\doxygen_catkin\;CMake Files\..\..\devel\share\doxygen_catkin\cmake\;CMake Files\..\..\devel\share\eigen_catkin\;CMake Files\..\..\devel\share\eigen_catkin\cmake\;CMake Files\..\..\devel\share\eigen_checks\;CMake Files\..\..\devel\share\eigen_checks\cmake\;CMake Files\..\..\devel\share\minkindr\;CMake Files\..\..\devel\share\minkindr\cmake\;CMake Files\..\..\devel\share\opencv3_catkin\;CMake Files\..\..\devel\share\opencv3_catkin\cmake\;CMake Files\..\..\devel\share\yaml_cpp_catkin\;CMake Files\..\..\devel\share\yaml_cpp_catkin\cmake\;CMake Files\..\..\devel\share\maplab_test_data\;CMake Files\..\..\devel\share\maplab_test_data\cmake\;CMake Files\..\..\devel\share\protobuf_catkin\;CMake Files\..\..\devel\share\protobuf_catkin\cmake\;CMake Files\..\..\devel\share\map_manager\;CMake Files\..\..\devel\share\map_manager\cmake\;CMake Files\..\..\devel\share\vi_map\;CMake Files\..\..\devel\share\vi_map\cmake\;CMake Files\..\..\devel\share\aslam_cv_cameras\;CMake Files\..\..\devel\share\aslam_cv_cameras\cmake\;CMake Files\..\..\devel\share\aslam_cv_frames\;CMake Files\..\..\devel\share\aslam_cv_frames\cmake\;CMake Files\..\..\devel\share\aslam_serialization\;CMake Files\..\..\devel\share\aslam_serialization\cmake\;CMake Files\..\..\devel\share\libnabo\;CMake Files\..\..\devel\share\libnabo\cmake\;CMake Files\..\..\devel\share\map_resources\;CMake Files\..\..\devel\share\map_resources\cmake\;CMake Files\..\..\devel\share\voxblox\;CMake Files\..\..\devel\share\voxblox\cmake\;CMake Files\..\..\devel\share\posegraph\;CMake Files\..\..\devel\share\posegraph\cmake\;CMake Files\..\..\devel\share\sensors\;CMake Files\..\..\devel\share\sensors\cmake\;CMake Files\..\..\devel\share\OpenCV\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\kinetic\;CMake Files\..\..\..\..\..\opt\ros\kinetic\share\;CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\;CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\;CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\;CMake Files\..\maplab_dependencies\;CMake Files\..\maplab_dependencies\3rdparty\;CMake Files\..\maplab_dependencies\3rdparty\doxygen_catkin\;CMake Files\..\maplab_dependencies\3rdparty\doxygen_catkin\cmake\;CMake Files\..\maplab\;CMake Files\..\maplab\aslam_cv2\;CMake Files\..\maplab\aslam_cv2\aslam_cv_common\;CMake Files\..\maplab\aslam_cv2\aslam_cv_common\cmake\;CMake Files\..\maplab\common\;CMake Files\..\maplab\common\console-common\;CMake Files\..\maplab\common\console-common\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="map_transpose_package">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 map_transpose_package"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tests">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_tests">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_tests"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="download_extra_data">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 download_extra_data"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_catkin_empty_exported_target">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 _catkin_empty_exported_target"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="clean_test_results">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean_test_results"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="map_transpose">
+				<Option output="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/devel/lib/libmap_transpose.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add directory="/home/zzh/maplab_ws2/src/map_transpose/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab_dependencies/internal/eigen_checks/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab_dependencies/internal/minkindr/minkindr/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab_dependencies/internal/voxblox/voxblox/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/aslam_cv2/aslam_cv_common/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/aslam_cv2/aslam_cv_cameras/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/aslam_cv2/aslam_cv_frames/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/common/maplab-common/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/common/aslam-serialization/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/common/console-common/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/backend/map-manager/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/backend/map-resources/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/map-structure/posegraph/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/map-structure/sensors/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/map-structure/vi-map/include"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/home/zzh/maplab_ws2/build/voxblox"/>
+					<Add directory="/home/zzh/maplab_ws2/devel/include"/>
+					<Add directory="/home/zzh/maplab_ws2/devel/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 map_transpose"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="map_transpose/fast">
+				<Option output="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/devel/lib/libmap_transpose.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add directory="/home/zzh/maplab_ws2/src/map_transpose/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab_dependencies/internal/eigen_checks/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab_dependencies/internal/minkindr/minkindr/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab_dependencies/internal/voxblox/voxblox/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/aslam_cv2/aslam_cv_common/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/aslam_cv2/aslam_cv_cameras/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/aslam_cv2/aslam_cv_frames/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/common/maplab-common/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/common/aslam-serialization/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/common/console-common/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/backend/map-manager/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/backend/map-resources/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/map-structure/posegraph/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/map-structure/sensors/include"/>
+					<Add directory="/home/zzh/maplab_ws2/src/maplab/map-structure/vi-map/include"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/home/zzh/maplab_ws2/build/voxblox"/>
+					<Add directory="/home/zzh/maplab_ws2/devel/include"/>
+					<Add directory="/home/zzh/maplab_ws2/devel/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 map_transpose/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_maps">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_maps"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="doxygen">
+				<Option working_dir="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 doxygen"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/src/map_transpose.cpp">
+			<Option target="map_transpose"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/package.xml">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/catkin_simple/cmake/catkin_simple-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\catkin_simple\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/catkin_simple/cmake/catkin_simpleConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\catkin_simple\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/catkin_simple/cmake/catkin_simpleConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\catkin_simple\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/console_common/cmake/console_commonConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\console_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/console_common/cmake/console_commonConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\console_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/gflags_catkin/cmake/gflags-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\gflags_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/gflags_catkin/cmake/gflags_catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\gflags_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/gflags_catkin/cmake/gflags_catkinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\gflags_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/glog_catkin/cmake/glog-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\glog_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/glog_catkin/cmake/glog_catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\glog_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/glog_catkin/cmake/glog_catkinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\glog_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/maplab_common/cmake/maplab_common-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\maplab_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/maplab_common/cmake/maplab_commonConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\maplab_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/maplab_common/cmake/maplab_commonConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\maplab_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/aslam_cv_common/cmake/aslam_cv_commonConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\aslam_cv_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/aslam_cv_common/cmake/aslam_cv_commonConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\aslam_cv_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/doxygen_catkin/cmake/doxygen_catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\doxygen_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/doxygen_catkin/cmake/doxygen_catkinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\doxygen_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/eigen_catkin/cmake/eigen-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\eigen_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/eigen_catkin/cmake/eigen_catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\eigen_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/eigen_catkin/cmake/eigen_catkinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\eigen_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/eigen_checks/cmake/eigen_checks-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\eigen_checks\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/eigen_checks/cmake/eigen_checksConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\eigen_checks\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/eigen_checks/cmake/eigen_checksConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\eigen_checks\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/minkindr/cmake/minkindrConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\minkindr\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/minkindr/cmake/minkindrConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\minkindr\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/opencv3_catkin/cmake/opencv3-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\opencv3_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/opencv3_catkin/cmake/opencv3_catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\opencv3_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/opencv3_catkin/cmake/opencv3_catkinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\opencv3_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/yaml_cpp_catkin/cmake/yaml-cpp-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\yaml_cpp_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/yaml_cpp_catkin/cmake/yaml_cpp_catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\yaml_cpp_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/yaml_cpp_catkin/cmake/yaml_cpp_catkinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\yaml_cpp_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/maplab_test_data/cmake/maplab-import-test-maps.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\maplab_test_data\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/maplab_test_data/cmake/maplab-test-data.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\maplab_test_data\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/maplab_test_data/cmake/maplab_test_dataConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\maplab_test_data\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/maplab_test_data/cmake/maplab_test_dataConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\maplab_test_data\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/protobuf_catkin/cmake/protobuf-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\protobuf_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/protobuf_catkin/cmake/protobuf-generate-cpp.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\protobuf_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/protobuf_catkin/cmake/protobuf_catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\protobuf_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/protobuf_catkin/cmake/protobuf_catkinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\protobuf_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/map_manager/cmake/map_managerConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\map_manager\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/map_manager/cmake/map_managerConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\map_manager\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/vi_map/cmake/vi_mapConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\vi_map\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/vi_map/cmake/vi_mapConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\vi_map\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/aslam_cv_cameras/cmake/aslam_cv_camerasConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\aslam_cv_cameras\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/aslam_cv_cameras/cmake/aslam_cv_camerasConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\aslam_cv_cameras\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/aslam_cv_frames/cmake/aslam_cv_framesConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\aslam_cv_frames\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/aslam_cv_frames/cmake/aslam_cv_framesConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\aslam_cv_frames\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/aslam_serialization/cmake/aslam_serializationConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\aslam_serialization\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/aslam_serialization/cmake/aslam_serializationConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\aslam_serialization\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/libnabo/cmake/libnaboConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\libnabo\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/libnabo/cmake/libnaboConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\libnabo\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/map_resources/cmake/map_resourcesConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\map_resources\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/map_resources/cmake/map_resourcesConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\map_resources\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/voxblox/cmake/voxblox-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\voxblox\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/voxblox/cmake/voxbloxConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\voxblox\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/voxblox/cmake/voxbloxConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\voxblox\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/posegraph/cmake/posegraphConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\posegraph\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/posegraph/cmake/posegraphConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\posegraph\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/sensors/cmake/sensorsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\sensors\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/sensors/cmake/sensorsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\sensors\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../devel/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/package.xml">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/all.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/assert.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/atomic_configure_file.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkinConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_add_env_hooks.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_destinations.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_download.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_generate_environment.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_install_python.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_libraries.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_metapackage.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_package.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_package_xml.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_python_setup.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_symlink_install.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/catkin_workspace.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/custom_install.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/debug_message.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/em_expand.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/empy.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/find_program_required.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/interrogate_setup_dot_py.py">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/legacy.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/list_append_deduplicate.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/list_append_unique.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/list_insert_in_workspace_order.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/python.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/safe_execute_process.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/stamp.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/string_starts_with.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/platform/lsb.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\platform\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/platform/ubuntu.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\platform\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/platform/windows.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\platform\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/test/catkin_download_test_data.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\test\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\test\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/test/nosetests.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\test\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/test/tests.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\test\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/tools/doxygen.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\tools\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/tools/libraries.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\tools\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/tools/rt.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\tools\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/_setup_util.py.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/env.sh.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/generate_cached_setup.py.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/local_setup.bash.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/local_setup.sh.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/local_setup.zsh.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkg.context.pc.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig-version.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/pkgConfig.cmake.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/rosinstall.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/setup.bash.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/setup.sh.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/templates/setup.zsh.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../../../../../opt/ros/kinetic/share/catkin/cmake/em/pkg.pc.em">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../maplab_dependencies/3rdparty/doxygen_catkin/cmake/doxygen_catkin.cmake">
+			<Option virtualFolder="CMake Files\..\maplab_dependencies\3rdparty\doxygen_catkin\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../maplab/aslam_cv2/aslam_cv_common/cmake/export_flags.cmake">
+			<Option virtualFolder="CMake Files\..\maplab\aslam_cv2\aslam_cv_common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/../maplab/common/console-common/cmake/create-console-plugin.cmake">
+			<Option virtualFolder="CMake Files\..\maplab\common\console-common\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/catkin/catkin_generated/version/package.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\catkin\catkin_generated\version\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/catkin_generated/package.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/zzh/maplab_ws2/src/map_transpose/cmake-build-debug/catkin_generated/installspace/_setup_util.py">
+			<Option virtualFolder="CMake Files\cmake-build-debug\catkin_generated\installspace\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
