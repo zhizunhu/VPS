@@ -1,5 +1,5 @@
 //
-// Created by zzh on 2019/12/11.
+// Created by zzh on 2019/12/11. 读取话题过程中处理
 //
 #include <ros/ros.h>
 #include <rosbag/view.h>

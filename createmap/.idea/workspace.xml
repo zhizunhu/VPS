@@ -3,49 +3,51 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="createmap" targetName="dynamic_reconfigure_generate_messages_lisp" />
+      <config projectName="createmap" targetName="std_srvs_generate_messages_nodejs" />
       <config projectName="createmap" targetName="actionlib_msgs_generate_messages_lisp" />
       <config projectName="createmap" targetName="test_maps" />
-      <config projectName="createmap" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="createmap" targetName="topic_tools_generate_messages_cpp" />
+      <config projectName="createmap" targetName="sensor_msgs_generate_messages_nodejs" />
       <config projectName="createmap" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="createmap" targetName="nodelet_generate_messages_py" />
       <config projectName="createmap" targetName="nav_msgs_generate_messages_cpp" />
+      <config projectName="createmap" targetName="roscpp_generate_messages_cpp" />
       <config projectName="createmap" targetName="tf_generate_messages_py" />
       <config projectName="createmap" targetName="visualization_msgs_generate_messages_eus" />
       <config projectName="createmap" targetName="pcl_msgs_generate_messages_nodejs" />
       <config projectName="createmap" targetName="actionlib_msgs_generate_messages_py" />
       <config projectName="createmap" targetName="pcl_msgs_generate_messages_eus" />
       <config projectName="createmap" targetName="bond_generate_messages_eus" />
-      <config projectName="createmap" targetName="visualization_msgs_generate_messages_cpp" />
       <config projectName="createmap" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="createmap" targetName="topic_tools_generate_messages_cpp" />
-      <config projectName="createmap" targetName="sensor_msgs_generate_messages_nodejs" />
+      <config projectName="createmap" targetName="dynamic_reconfigure_generate_messages_eus" />
+      <config projectName="createmap" targetName="std_srvs_generate_messages_py" />
+      <config projectName="createmap" targetName="visualization_msgs_generate_messages_py" />
       <config projectName="createmap" targetName="actionlib_generate_messages_py" />
       <config projectName="createmap" targetName="tf_generate_messages_nodejs" />
-      <config projectName="createmap" targetName="topic_tools_generate_messages_nodejs" />
+      <config projectName="createmap" targetName="rosgraph_msgs_generate_messages_py" />
       <config projectName="createmap" targetName="dynamic_reconfigure_gencfg" />
-      <config projectName="createmap" targetName="pcl_ros_gencfg" />
       <config projectName="createmap" targetName="bond_generate_messages_nodejs" />
       <config projectName="createmap" targetName="tf2_msgs_generate_messages_py" />
       <config projectName="createmap" targetName="actionlib_generate_messages_nodejs" />
       <config projectName="createmap" targetName="pcl_msgs_generate_messages_lisp" />
       <config projectName="createmap" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="createmap" targetName="std_srvs_generate_messages_py" />
-      <config projectName="createmap" targetName="nav_msgs_generate_messages_eus" />
       <config projectName="createmap" targetName="roscpp_generate_messages_eus" />
       <config projectName="createmap" targetName="topic_tools_generate_messages_eus" />
       <config projectName="createmap" targetName="dynamic_reconfigure_generate_messages_py" />
-      <config projectName="createmap" targetName="run_tests" />
-      <config projectName="createmap" targetName="tf2_msgs_generate_messages_lisp" />
       <config projectName="createmap" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="createmap" targetName="bond_generate_messages_cpp" />
       <config projectName="createmap" targetName="nav_msgs_generate_messages_nodejs" />
-      <config projectName="createmap" targetName="visualization_msgs_generate_messages_nodejs" />
+      <config projectName="createmap" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="createmap" targetName="geometry_msgs_generate_messages_cpp" />
       <config projectName="createmap" targetName="sensor_msgs_generate_messages_cpp" />
       <config projectName="createmap" targetName="tf_generate_messages_lisp" />
       <config projectName="createmap" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="createmap" targetName="actionlib_generate_messages_lisp" />
       <config projectName="createmap" targetName="nodelet_generate_messages_nodejs" />
       <config projectName="createmap" targetName="std_srvs_generate_messages_eus" />
+      <config projectName="createmap" targetName="roscpp_generate_messages_lisp" />
       <config projectName="createmap" targetName="dynamic_reconfigure_generate_messages_nodejs" />
       <config projectName="createmap" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="createmap" targetName="tests" />
       <config projectName="createmap" targetName="geometry_msgs_generate_messages_lisp" />
       <config projectName="createmap" targetName="std_msgs_generate_messages_eus" />
       <config projectName="createmap" targetName="nodelet_generate_messages_lisp" />
@@ -62,41 +64,39 @@
       <config projectName="createmap" targetName="std_msgs_generate_messages_py" />
       <config projectName="createmap" targetName="std_srvs_generate_messages_lisp" />
       <config projectName="createmap" targetName="sensor_msgs_generate_messages_eus" />
-      <config projectName="createmap" targetName="dynamic_reconfigure_generate_messages_eus" />
       <config projectName="createmap" targetName="tf2_msgs_generate_messages_eus" />
       <config projectName="createmap" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="createmap" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="createmap" targetName="sensor_msgs_generate_messages_py" />
       <config projectName="createmap" targetName="tf_generate_messages_cpp" />
       <config projectName="createmap" targetName="std_msgs_generate_messages_lisp" />
       <config projectName="createmap" targetName="nodelet_topic_tools_gencfg" />
       <config projectName="createmap" targetName="rosgraph_msgs_generate_messages_cpp" />
       <config projectName="createmap" targetName="visualization_msgs_generate_messages_lisp" />
-      <config projectName="createmap" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="createmap" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="createmap" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="createmap" targetName="run_tests" />
       <config projectName="createmap" targetName="download_extra_data" />
       <config projectName="createmap" targetName="nodelet_generate_messages_eus" />
       <config projectName="createmap" targetName="nav_msgs_generate_messages_py" />
       <config projectName="createmap" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="createmap" targetName="bond_generate_messages_lisp" />
-      <config projectName="createmap" targetName="clean_test_results" />
-      <config projectName="createmap" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="createmap" targetName="std_srvs_generate_messages_nodejs" />
+      <config projectName="createmap" targetName="tests" />
+      <config projectName="createmap" targetName="visualization_msgs_generate_messages_cpp" />
       <config projectName="createmap" targetName="geometry_msgs_generate_messages_eus" />
-      <config projectName="createmap" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="createmap" targetName="pcl_ros_gencfg" />
       <config projectName="createmap" targetName="pcl_msgs_generate_messages_cpp" />
-      <config projectName="createmap" targetName="bond_generate_messages_cpp" />
+      <config projectName="createmap" targetName="nav_msgs_generate_messages_eus" />
       <config projectName="createmap" targetName="doxygen" />
       <config projectName="createmap" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="createmap" targetName="pcl_msgs_generate_messages_py" />
       <config projectName="createmap" targetName="dynamic_reconfigure_generate_messages_cpp" />
       <config projectName="createmap" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="createmap" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="createmap" targetName="visualization_msgs_generate_messages_py" />
+      <config projectName="createmap" targetName="topic_tools_generate_messages_nodejs" />
+      <config projectName="createmap" targetName="visualization_msgs_generate_messages_nodejs" />
       <config projectName="createmap" targetName="roscpp_generate_messages_py" />
       <config projectName="createmap" targetName="tf_generate_messages_eus" />
       <config projectName="createmap" targetName="tf2_msgs_generate_messages_cpp" />
       <config projectName="createmap" targetName="actionlib_generate_messages_eus" />
-      <config projectName="createmap" targetName="nodelet_generate_messages_py" />
+      <config projectName="createmap" targetName="clean_test_results" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -108,9 +108,12 @@
     <list default="true" id="4da9bf24-e930-433d-876d-7412d1be59cf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/src.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/src.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/mapbuilder.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/mapbuilder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IROS_map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/IROS_map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/test.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/test.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/launch/test.launch" beforeDir="false" afterPath="$PROJECT_DIR$/launch/test.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mapbuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/mapbuilder.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/readfromtopic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/readfromtopic.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +156,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.advertisement.text.has.clang-format" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test-plugin/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -795,7 +798,12 @@
       <workItem from="1577265668102" duration="4817000" />
       <workItem from="1577412712179" duration="654000" />
       <workItem from="1577518409538" duration="295000" />
-      <workItem from="1577668248514" duration="5884000" />
+      <workItem from="1577668248514" duration="7088000" />
+      <workItem from="1577694978736" duration="605000" />
+      <workItem from="1577707192308" duration="206000" />
+      <workItem from="1577709096086" duration="80000" />
+      <workItem from="1577796753109" duration="2163000" />
+      <workItem from="1577927809261" duration="17999000" />
     </task>
     <servers />
   </component>

@@ -33,16 +33,14 @@
 #include <test.h>
 
 std::vector<test::IMUDATA> imu_data;
-std::vector<test::groudtruth> gt_data;
 vi_map::VIMap* map;
 online_map_builders::StreamMapBuilder* builder;
 std::shared_ptr<aslam::NCamera> camera_rig;
 double last_timestamp = -1;
-double cur_timestamp = -1;
 double next_timestamp = -1;
 std::shared_ptr<aslam::NCamera> get_camera_rig(ros::NodeHandle n);
 int main(int argc, char ** argv){
-    ros::init(argc, argv, "test");
+    ros::init(argc, argv, "test1");
     ros::NodeHandle n("~");
     vi_map::ImuSigmas imu_sigma;
     test::imuconfig_from_yaml(n, imu_sigma);
@@ -56,9 +54,9 @@ int main(int argc, char ** argv){
     camera_rig = get_camera_rig(n);
     std::string cam_topic;
     std::string imu_topic;
-    std::string gt_topic;
+    std::string gt_path;
     std::string map_folder;
-    test::get_topic_and_path(n, cam_topic, imu_topic, gt_topic, map_folder);
+    test::get_topic_and_path(n, cam_topic, imu_topic, gt_path, map_folder);
     map = new vi_map::VIMap(map_folder);
     builder = new online_map_builders::StreamMapBuilder(camera_rig, std::move(imu_rig), map);
 
@@ -68,9 +66,9 @@ int main(int argc, char ** argv){
     rosbag::Bag bag;
     bag.open(path_to_bag, rosbag::bagmode::Read);
 
+
     rosbag::View view_imu(bag, rosbag::TopicQuery(imu_topic));
     rosbag::View view_pic(bag, rosbag::TopicQuery(cam_topic));
-    rosbag::View view_gt(bag, rosbag::TopicQuery(gt_topic));
     std::vector<test::IMUDATA> imu_data;
     if(view_imu.size() == 0){
         ROS_ERROR("open bag file failed");
@@ -95,21 +93,40 @@ int main(int argc, char ** argv){
         i ++ ;
     }
 
-    std::vector<test::groudtruth> gt_all;
-    for (const rosbag::MessageInstance & m : view_gt){
-        if (!ros::ok()){
-            break;
+    std::map<double, test::pose> groundtruth;
+    std::ifstream gt_file;
+    gt_file.open(gt_path);
+    if (!gt_file.is_open()){
+        std::cout << "ssss" << std::endl;
+    }
+    std::string cc;
+    getline(gt_file, cc);
+    getline(gt_file, cc);
+    while (!cc.empty()){
+        std::stringstream ss;
+        ss << cc;
+        double timestamp;
+        test::pose gt1;
+        double px,py,pz,qx,qy,qz,qw;
+        while (!ss.eof()){
+            ss >> timestamp;
+            std::cout << timestamp << std::endl;
+            ss >> px;
+            ss >> py;
+            ss >> pz;
+            ss >> qx;
+            ss >> qy;
+            ss >> qz;
+            ss >> qw;
         }
-        geometry_msgs::PoseStamped::ConstPtr gt = m.instantiate<geometry_msgs::PoseStamped>();
-        double timeg = (*gt).header.stamp.toSec();
-        Eigen::Quaterniond q((*gt).pose.orientation.w, (*gt).pose.orientation.x, (*gt).pose.orientation.y, (*gt).pose.orientation.z);
-        Eigen::Vector3d t;
-        t << (*gt).pose.position.x, (*gt).pose.position.y, (*gt).pose.position.z;
-        test::groudtruth gt_1;
-        gt_1.timestamp = timeg;
-        gt_1.rotation = q.toRotationMatrix();
-        gt_1.transpose = t;
-        gt_all.push_back(gt_1);
+        Eigen::Vector3d transpose(px,py,pz);
+        Eigen::Quaterniond rotation_q(qw, qx, qy, qz);
+        Eigen::Matrix3d rotation = rotation_q.toRotationMatrix();
+        gt1.transpose = transpose;
+        gt1.rotation = rotation;
+        groundtruth.insert(std::make_pair(timestamp, gt1));
+
+        getline(gt_file, cc);
     }
     double last_timestamp = -1;
     //调节频率
@@ -120,17 +137,7 @@ int main(int argc, char ** argv){
         if (!ros::ok()){
             break;
         }
-        /*if (decframe){
-            decframe = false;
-        }
-        else
-        {
-            decframe = true;
-        }
 
-        if (decframe){
-            continue;
-        }*/
         sensor_msgs::Image::Ptr img = m.instantiate<sensor_msgs::Image>();
         cv_bridge::CvImageConstPtr cv_ptr;
         try {
@@ -144,8 +151,36 @@ int main(int argc, char ** argv){
         ROS_INFO("pictime is %f", timep);
         //weizi
         Eigen::Matrix4d T_M_I = Eigen::Matrix4d::Identity();
-        T_M_I.block(0,0,3,3)=gt_all.at(gt_num).rotation;
-        T_M_I.block(0,3,3,1)=gt_all.at(gt_num).transpose;
+        if (groundtruth.count(timep)){
+            T_M_I.block(0,0,3,3)=groundtruth.find(timep)->second.rotation;
+            T_M_I.block(0,3,3,1)=groundtruth.find(timep)->second.transpose;
+        } else{
+
+            LOG(ERROR) << "could not find gt , so interplate";
+            //continue;
+            auto gt_after = groundtruth.lower_bound(timep);
+            double time_after = gt_after->first;
+            test::pose pose_after = gt_after->second;
+            if (gt_after->first == groundtruth.begin()->first){
+                LOG(ERROR) << "mmmmmmmm";
+                continue;
+            }
+            try {
+                gt_after--;
+                double time_befor = gt_after->first;
+                test::pose pose_before = gt_after->second;
+
+                test::pose cur_pose = test::interplate_gt(pose_before, time_befor, pose_after, time_after,
+                                                          timep);
+                T_M_I.block(0, 0, 3, 3) = cur_pose.rotation;
+                T_M_I.block(0, 3, 3, 1) = cur_pose.transpose;
+            }
+            catch (std::exception &e){
+                std::cout << e.what() << std::endl;
+                std::cout << "ssssss" << std::endl;
+                continue;
+            }
+        }
         //update
         vio::VioUpdate update;
         update.timestamp_ns = (int64_t)(1e9*timep);
@@ -210,6 +245,7 @@ int main(int argc, char ** argv){
         map->storeRawImage(sysnc_nframe.nframe->getFrame(0u).getRawImage(), 0u, map->getVertexPtr(builder->getLastVertexId()));
         last_timestamp = timep;
         gt_num++;
+        std::cout << "gt_num is " << gt_num << std::endl;
 
     }
     feature_tracking::VOFeatureTrackingPipeline trackpipe;

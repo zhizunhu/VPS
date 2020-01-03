@@ -1,5 +1,5 @@
 //
-// Created by zzh on 2019/12/11.
+// Created by zzh on 2019/12/11. 先读取消息，ctrl c 后建图
 //
 #include <ros/ros.h>
 #include <rosbag/view.h>

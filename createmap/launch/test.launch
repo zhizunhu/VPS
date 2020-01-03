@@ -1,12 +1,12 @@
 <!--从ROS包中读取数据并建图保存-->
 <launch>
     <node pkg="createmap" type="test1" name="mapbuilder" output="screen">
-        <param name="config_file" type="string" value="/home/zzh/rosbag/OpenLORIS.yaml"/>
+        <param name="config_file" type="string" value="/home/zzh/maplab_src/src/createmap/config/cameraandimu.yaml"/>
         <param name="is_fisheye" type="bool" value="true"/>
-        <param name="camera_topic" type="string" value="/cam0/image_raw"/>
-        <param name="imu_topic" type="string" value="/imu0"/>
-        <param name="gt_topic" type="string" value="/tf0"/>
-        <param name="map_folder" type="string" value="/home/zzh/_map"/>
-        <param name="path_to_bag" type="string" value="/home/zzh/sharetohost/rosbag/111.bag"/>
+        <param name="camera_topic" type="string" value="/camera/fisheye1/image_raw"/>
+        <param name="imu_topic" type="string" value="/camera/imu"/>
+        <param name="gt_path" type="string" value="/home/zzh/sharetohost/rosbag/cafe2_gt.txt"/>
+        <param name="map_folder" type="string" value="/home/zzh/sharetohost/mapout/_cafe2"/>
+        <param name="path_to_bag" type="string" value="/home/zzh/sharetohost/rosbag/cafe2.bag"/>
    </node>
 </launch>
